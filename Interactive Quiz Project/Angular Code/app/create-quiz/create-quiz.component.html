@@ -1,0 +1,31 @@
+<div class="container-fluid">
+
+    <div class="row justify-content-center" style="height: 40vh;">
+        <div class="col-12 col-md-6 border border-warning" [formGroup]="fbFormGroup">
+            <div class="text-dark mb-3" style="font-family: cursive; font-size:25px">
+                Add Question
+            </div>
+
+            <div>
+                <input type="text" placeholder="Question" class="form-control" formControlName="question" />
+            </div>
+
+            <div class="mt-1">
+                <input type="text" placeholder="Option 1" class="form-control" formControlName="option1" />
+            </div>
+
+            <div class="mt-1">
+                <input type="text" placeholder="Option 2" class="form-control" formControlName="option2" />
+            </div>
+
+            <div class="mt-1">
+                <input type="text" placeholder="Option 3" class="form-control" formControlName="option3" />
+            </div>
+
+            <button class="btn btn-sm btn-warning mt-2 mb-2" (click)="makeCall()">
+                Add
+            </button>
+        </div>
+    </div>
+
+</div>

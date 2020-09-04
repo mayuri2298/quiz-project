@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-md-3 mt-5 border d-flex flex-column align-items-center " style="height: 80vh;">
+            <div class="col bg-light d-flex flex-column justify-content-center align-items-center" [formGroup]="fbFormGroup">
+
+                <div>
+                    <fa-icon [icon]="faD" style="font-size: 54px"></fa-icon>
+                </div>
+
+                <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                    A simple danger alert—check it out!
+                </div>
+
+                <div class="text-dark mb-3" style="font-family: cursive; font-size:40px">
+                    Quizwall
+                </div>
+
+                <div class="mb-2">
+                    <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" />
+                </div>
+
+                <div class="mt-1 mb-2">
+                    <input type="password" placeholder="Enter Password" class="form-control" formControlName="password" />
+                </div>
+
+                <button class="btn btn-sm btn-warning mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()">
+                    Login Here
+                </button>
+
+                <a routerLink="/register" style="font-size: large;font-family:cursive">Register Here</a>
+            </div>
+        </div>
+
+    </div>
+</div>
